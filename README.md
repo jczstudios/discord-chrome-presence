@@ -1,7 +1,7 @@
 ## Overview
 
 Discord-Chrome-Presence allows you to set your Discord Rich Presence to whatever you're looking at it in Chrome. An additional Chrome extension is included in order to rely site information.
-<img src="https://i.imgur.com/Rg79DD6.png" width="40%">
+<img src="https://i.imgur.com/Rg79DD6.png" width="30%" />
 
 ## Installation
 
