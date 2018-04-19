@@ -1,4 +1,4 @@
-updatePresence(tabId, changeInfo, tab) {
+function updatePresence(tabId, changeInfo, tab) {
   if (tab.active === true && !(tab.url == undefined)) {
     var url = new URL(tab.url);
 
