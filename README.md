@@ -5,9 +5,9 @@ Discord-Chrome-Presence allows you to set your Discord Rich Presence to whatever
 
 ## Requirements
 
-* Git
-* Node
-* Google Chrome or Chromium
+* [Git](https://git-scm.com/)
+* [Node](https://nodejs.org/en/)
+* [Google Chrome](http://google.com/chrome) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
 
 ## Installation
 
