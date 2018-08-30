@@ -10,7 +10,7 @@
   "author": "Julian Curtis-Zilius",
   "license": "Unlicense",
   "dependencies": {
-    "discord-rich-presence": "0.0.6",
+    "discord-rich-presence": "^0.0.7",
     "express": "^4.16.2"
   },
   "devDependencies": {},
