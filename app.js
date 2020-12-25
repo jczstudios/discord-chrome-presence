@@ -14,7 +14,8 @@ client.once('ready', ()=>{
 				state: body.state.substring(0, 128),
 				details: body.details.substring(0, 128),
 				largeImageKey: 'chrome',
-				largeImageText: 'Google Chrome',
+        largeImageText: 'Google Chrome',
+        startTimestamp: Date.now(),
 				instance: true
 			};
 			client.setActivity(presence);
