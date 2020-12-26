@@ -20,9 +20,17 @@ client.once('ready', ()=>{
 			};
 			client.setActivity(presence);
 		} else if (body.action == "clear") {
-			client.clearActivity();
+			let presence = {
+				state: "Idling",
+				details: "Idling",
+				largeImageKey: 'chrome',
+        largeImageText: 'Google Chrome',
+				instance: true
+			};
+			client.setActivity(presence);
 		}
 		response.sendStatus(200);
 	});
+  client.clearActivity();
 	app.listen(3000, () => console.log('Discord-Chrome-Presence is ready!'));
 });
