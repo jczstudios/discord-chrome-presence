@@ -10,6 +10,7 @@ client.once('ready', ()=>{
 	app.post("/", (request, response) => {
 		let body = request.body;
 		if (body.action == "set") {
+      console.log(`${body.state.substring(0, 128)} - ${body.details.substring(0, 128)}`);
 			let presence = {
 				state: body.state.substring(0, 128),
 				details: body.details.substring(0, 128),
@@ -20,6 +21,7 @@ client.once('ready', ()=>{
 			};
 			client.setActivity(presence);
 		} else if (body.action == "clear") {
+      console.log('Idling');
 			let presence = {
 				state: "Idling",
 				details: "Idling",
