@@ -10,18 +10,29 @@ client.once('ready', ()=>{
 	app.post("/", (request, response) => {
 		let body = request.body;
 		if (body.action == "set") {
+      console.log(`${body.state.substring(0, 128)} - ${body.details.substring(0, 128)}`);
 			let presence = {
 				state: body.state.substring(0, 128),
 				details: body.details.substring(0, 128),
 				largeImageKey: 'chrome',
-				largeImageText: 'Google Chrome',
+        largeImageText: 'Google Chrome',
+        startTimestamp: Date.now(),
 				instance: true
 			};
 			client.setActivity(presence);
 		} else if (body.action == "clear") {
-			client.clearActivity();
+      console.log('Idling');
+			let presence = {
+				state: "Idling",
+				details: "Idling",
+				largeImageKey: 'chrome',
+        largeImageText: 'Google Chrome',
+				instance: true
+			};
+			client.setActivity(presence);
 		}
 		response.sendStatus(200);
 	});
+  client.clearActivity();
 	app.listen(3000, () => console.log('Discord-Chrome-Presence is ready!'));
 });

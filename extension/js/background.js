@@ -3,6 +3,7 @@ function updatePresence(tab) {
       var url = new URL(tab.url);
       var data = {
         action: "set",
+        id: tab.id,
         url: tab.url,
         details: url.hostname,
         state: tab.title,
